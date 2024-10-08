@@ -17,3 +17,39 @@
 
 ### ERD
 ![테이블 이미지](https://github.com/KimYe-Won/inflearn-recipe/blob/main/recipe_table.png)
+
+
+## API
+
+#### 1. 레시피 작성
+
+- **URL**: `/api/recipes`
+- **METHOD**: `POST`
+- **REQUEST BODY**:
+
+<pre>
+<code>
+  {
+  "title": "string"
+}
+</code>
+</pre>
+
+- **response**: `201 created`: 레시피 작성 완료
+
+#### 2. 레시피 재료 작성
+
+- **URL**: `/api/recipes/{recipeId}/ingredients`
+- **METHOD**: `POST`
+- **REQUEST BODY**:
+
+<pre>
+<code>
+{
+  "name": "string",
+  "count": "int"
+}
+</code>
+</pre>
+
+- **response**: `201 created`: 레시피 재료 작성 완료
